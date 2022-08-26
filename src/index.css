@@ -339,7 +339,7 @@ button {
 .swiperSlideText {
   color: #ffffff;
   position: absolute;
-  top: 70px;
+  top: 45%;
   left: 0;
   font-weight: 600;
   max-width: 90%;
@@ -356,7 +356,7 @@ button {
 .swiperSlidePrice {
   color: #000000;
   position: absolute;
-  top: 143px;
+  top: 55%;
   left: 11px;
   font-weight: 600;
   max-width: 90%;
