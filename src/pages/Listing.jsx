@@ -11,7 +11,7 @@ import shareIcon from '../assets/svg/shareIcon.svg'
 
 
 
-import { Navigation, Pagination, Scrollbar, A11y} from 'swiper';
+import { Navigation, Pagination, Scrollbar, A11y, Autoplay} from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -57,8 +57,14 @@ function Listing() {
 
 
       <Swiper 
-      modules={[Navigation, Pagination, Scrollbar, A11y]}
+      modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
       slidesPerView={1} 
+      autoplay={{
+        delay: 5000,
+        disableOnInteraction: false,
+        
+      }}
+      speed={1500}
       pagination={{ clickable: true }}
      
       >
@@ -69,7 +75,7 @@ function Listing() {
             <img src={listing.imgUrls[index]} 
             alt="listing images" 
             className='swiperSlideDiv'
-            style={{objectFit:'cover', width:'100vw', height:'100vh',  }} 
+            style={{objectFit:'cover', width:'100vw', height:'87vh',  }} 
             />
     
           </SwiperSlide>

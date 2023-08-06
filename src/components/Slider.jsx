@@ -9,7 +9,7 @@ import Spinner from './Spinner'
 
 
 
-import { Navigation, Pagination, Scrollbar, A11y} from 'swiper';
+import { Navigation, Pagination, Scrollbar, A11y, Autoplay} from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -65,8 +65,14 @@ function Slider() {
         <p className='exploreHeading'>Recommended</p>
 
         <Swiper
-         modules={[Navigation, Pagination, Scrollbar, A11y]}
+         modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
          slidesPerView={1} 
+         autoplay={{
+          delay: 5000,
+          disableOnInteraction: false,
+          
+        }}
+        speed={1500}
          pagination={{ clickable: true }}>
           {listings.map(({ data, id }) => (
             <SwiperSlide
@@ -80,7 +86,7 @@ function Slider() {
                 <div  className='swiperSlideDiv' >
                   <img src={data.imgUrls[0]} alt="listing images"  
                   className='swiperSlideDiv'
-                  style={{objectFit:'cover', width:'100vw', height:'100vw',  }} 
+                  style={{objectFit:'cover', width:'100vw', height:'65vh',  }} 
                   />
 
 
